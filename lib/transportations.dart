@@ -90,7 +90,7 @@ class __TransportationState extends State<_Transportation> {
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     // Text("Price: 12"),
-                    // Text("Phone: " + phoneNo),
+                    Text("Phone: " + phoneNo),
                     // Row(
                     //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     //   children: [

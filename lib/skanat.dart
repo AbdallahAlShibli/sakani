@@ -45,20 +45,20 @@ class __SkanatState extends State<_Skanat> {
                   fontSize: 20,
                   fontWeight: FontWeight.bold)),
           for (var object in dataListS1)
-            productBox(object.name, object.imgsList, object.phoneNo),
+            productBox(object.name, object.imgsList, object.phoneNo, object.desc),
           Text("حي التراث",
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 20,
                   fontWeight: FontWeight.bold)),
           for (var object in dataListS2)
-            productBox(object.name, object.imgsList, object.phoneNo),
+            productBox(object.name, object.imgsList, object.phoneNo, object.desc),
         ]),
       ),
     );
   }
 
-  Widget productBox(String name, img, String phoneNo) {
+  Widget productBox(String name, img, String phoneNo, String desc) {
     late Container con;
 
     con = Container(
@@ -107,6 +107,7 @@ class __SkanatState extends State<_Skanat> {
                     ),
                     // Text("Price: 12"),
                     Text("Phone: " + phoneNo),
+                    Text("Description: " + desc),
                     // Row(
                     //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     //   children: [
