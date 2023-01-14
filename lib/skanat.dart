@@ -19,16 +19,10 @@ class Skanat extends StatelessWidget {
                   color: Color.fromARGB(255, 84, 27, 94),
                   fontWeight: FontWeight.bold,
                 )),
-            actions: [
-              IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const MyApp()),
-                    );
-                  },
-                  icon: Icon(Icons.arrow_back))
-            ],
+            leading: IconButton(
+              icon: const Icon(Icons.arrow_back, color: Colors.black),
+              onPressed: () => Navigator.of(context).pop(),
+            ),
           ),
           body: _Skanat(),
         ));
