@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sakani/main.dart';
 import 'package:sakani/models/restuModel.dart';
 
 class Resturants extends StatelessWidget {
@@ -17,6 +18,16 @@ class Resturants extends StatelessWidget {
                   color: Color.fromARGB(255, 84, 27, 94),
                   fontWeight: FontWeight.bold,
                 )),
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MyApp()),
+                    );
+                  },
+                  icon: Icon(Icons.arrow_back))
+            ],
           ),
           body: _Resturants(),
         ));

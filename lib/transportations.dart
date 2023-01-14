@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'main.dart';
 import 'models/transModel.dart';
 
 class Transportation extends StatelessWidget {
@@ -18,6 +19,16 @@ class Transportation extends StatelessWidget {
                   color: Color.fromARGB(255, 84, 27, 94),
                   fontWeight: FontWeight.bold,
                 )),
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MyApp()),
+                    );
+                  },
+                  icon: Icon(Icons.arrow_back))
+            ],
           ),
           body: _Transportation(),
         ));
@@ -91,6 +102,7 @@ class __TransportationState extends State<_Transportation> {
                     ),
                     // Text("Price: 12"),
                     Text("Phone: " + phoneNo),
+
                     // Row(
                     //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     //   children: [

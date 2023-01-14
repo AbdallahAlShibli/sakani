@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'main.dart';
 import 'models/sakanModel.dart';
 
 class Skanat extends StatelessWidget {
@@ -18,6 +19,16 @@ class Skanat extends StatelessWidget {
                   color: Color.fromARGB(255, 84, 27, 94),
                   fontWeight: FontWeight.bold,
                 )),
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MyApp()),
+                    );
+                  },
+                  icon: Icon(Icons.arrow_back))
+            ],
           ),
           body: _Skanat(),
         ));
@@ -45,14 +56,16 @@ class __SkanatState extends State<_Skanat> {
                   fontSize: 20,
                   fontWeight: FontWeight.bold)),
           for (var object in dataListS1)
-            productBox(object.name, object.imgsList, object.phoneNo, object.desc),
+            productBox(
+                object.name, object.imgsList, object.phoneNo, object.desc),
           Text("حي التراث",
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 20,
                   fontWeight: FontWeight.bold)),
           for (var object in dataListS2)
-            productBox(object.name, object.imgsList, object.phoneNo, object.desc),
+            productBox(
+                object.name, object.imgsList, object.phoneNo, object.desc),
         ]),
       ),
     );
@@ -90,8 +103,7 @@ class __SkanatState extends State<_Skanat> {
                   scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                    for(var i = 0; i< img.length; i++) 
-                      imageBox(img[i]),
+                      for (var i = 0; i < img.length; i++) imageBox(img[i]),
                     ],
                   )),
             ),
@@ -128,7 +140,6 @@ class __SkanatState extends State<_Skanat> {
   }
 
   Widget imageBox(imgurl) {
-    print(imgurl);
     return Container(
       decoration: BoxDecoration(
         boxShadow: [
